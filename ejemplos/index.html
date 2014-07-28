@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Mareas Mazagón</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        ul#mareas {
+            list-style-type: none;
+            padding: 0px;
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="titulo">Mareas </h1>
+    <ul id="mareas" class="mareas" ></ul>
+    <p id="pronostico"></p>
+    
+    <script src="https://raw.githubusercontent.com/frantello/MareasJS/master/mareas.js"></script>
+    <script>
+        function toFlecha(tipoMarea) {
+            if (tipoMarea == "Bajamar") {
+                return "&#9660";
+            } else {
+                return "&#9650";
+            }
+        }
+        
+        var ahora = new Date();
+        
+        var titulo = document.getElementById("titulo");
+        titulo.innerHTML += ahora.toLocaleDateString();
+        
+        var mareas = document.getElementById("mareas");
+        tablaMareas.buscar(ahora).forEach(function(marea) {
+            var item = document.createElement("li");
+            item.innerHTML = toFlecha(marea.tipo) + " " +
+                    marea.fecha.toLocaleTimeString() + " (" +
+                    marea.coeficiente.mediaNoche + " - " +
+                    marea.coeficiente.medioDia + ")";
+            mareas.appendChild(item);
+        });
+        
+        var pronostico = document.getElementById("pronostico");
+        pronostico.innerHTML = tablaMareas.pronosticar();
+    </script>
+</body>
+</html>

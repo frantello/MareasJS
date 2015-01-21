@@ -1,28 +1,32 @@
 "use strict";
 
-(function(global) {
+(function (global) {
+
     function Coeficiente(mediaNoche, medioDia) {
         this.mediaNoche = mediaNoche;
         this.medioDia = medioDia;
     }
+
     function Marea(tipo, fecha, coeficiente) {
         this.tipo = tipo;
         this.fecha = fecha;
         this.coeficiente = coeficiente;
     }
+
     Marea.Tipo = {
         BAJAMAR: "Bajamar",
         PLEAMAR: "Pleamar"
-    }
+    };
+
     var tablaMareas = {
-        buscar: function(fecha) {
-            return mareas.filter(function(marea) {
+        buscar: function (fecha) {
+            return mareas.filter(function (marea) {
                 return marea.fecha.getFullYear() === fecha.getFullYear() &&
                         marea.fecha.getMonth() === fecha.getMonth() &&
                         marea.fecha.getDate() === fecha.getDate();
-            });  
+            });
         },
-        pronosticar: function() {
+        pronosticar: function () {
             var ahora = new Date();
             var mareasAhora = this.buscar(ahora);
             for (var i = 0; i < mareasAhora.length; i++) {
@@ -2868,4 +2872,5 @@
     mareas.push(new Marea(Marea.Tipo.PLEAMAR, new Date(Date.UTC(2015, 11, 31, 18, 25, 0)), new Coeficiente(53, 49)));
 
     global.tablaMareas = tablaMareas;
+
 })(window);

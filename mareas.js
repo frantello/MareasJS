@@ -2399,17 +2399,14 @@
     mareas.push(new Marea(Marea.Tipo.BAJAMAR, new Date(Date.UTC(2015, 8, 1, 9, 38, 0)), new Coeficiente(104, 97)));
     mareas.push(new Marea(Marea.Tipo.PLEAMAR, new Date(Date.UTC(2015, 8, 1, 16, 6, 0)), new Coeficiente(104, 97)));
     mareas.push(new Marea(Marea.Tipo.BAJAMAR, new Date(Date.UTC(2015, 8, 1, 22, 4, 0)), new Coeficiente(104, 97)));
-    mareas.push(new Marea(Marea.Tipo.PLEAMAR, new Date(Date.UTC(2015, 8, 1, x, , 0)), new Coeficiente(104, 97)));
     mareas.push(new Marea(Marea.Tipo.PLEAMAR, new Date(Date.UTC(2015, 8, 2, 4, 31, 0)), new Coeficiente(91, 83)));
     mareas.push(new Marea(Marea.Tipo.BAJAMAR, new Date(Date.UTC(2015, 8, 2, 10, 23, 0)), new Coeficiente(91, 83)));
     mareas.push(new Marea(Marea.Tipo.PLEAMAR, new Date(Date.UTC(2015, 8, 2, 16, 53, 0)), new Coeficiente(91, 83)));
     mareas.push(new Marea(Marea.Tipo.BAJAMAR, new Date(Date.UTC(2015, 8, 2, 22, 50, 0)), new Coeficiente(91, 83)));
-    mareas.push(new Marea(Marea.Tipo.PLEAMAR, new Date(Date.UTC(2015, 8, 2, x, , 0)), new Coeficiente(91, 83)));
     mareas.push(new Marea(Marea.Tipo.PLEAMAR, new Date(Date.UTC(2015, 8, 3, 5, 18, 0)), new Coeficiente(75, 67)));
     mareas.push(new Marea(Marea.Tipo.BAJAMAR, new Date(Date.UTC(2015, 8, 3, 11, 12, 0)), new Coeficiente(75, 67)));
     mareas.push(new Marea(Marea.Tipo.PLEAMAR, new Date(Date.UTC(2015, 8, 3, 17, 44, 0)), new Coeficiente(75, 67)));
     mareas.push(new Marea(Marea.Tipo.BAJAMAR, new Date(Date.UTC(2015, 8, 3, 23, 39, 0)), new Coeficiente(75, 67)));
-    mareas.push(new Marea(Marea.Tipo.PLEAMAR, new Date(Date.UTC(2015, 8, 3, x, , 0)), new Coeficiente(75, 67)));
     mareas.push(new Marea(Marea.Tipo.PLEAMAR, new Date(Date.UTC(2015, 8, 4, 6, 11, 0)), new Coeficiente(60, 54)));
     mareas.push(new Marea(Marea.Tipo.BAJAMAR, new Date(Date.UTC(2015, 8, 4, 12, 7, 0)), new Coeficiente(60, 54)));
     mareas.push(new Marea(Marea.Tipo.PLEAMAR, new Date(Date.UTC(2015, 8, 4, 18, 39, 0)), new Coeficiente(60, 54)));
@@ -2869,7 +2866,6 @@
     mareas.push(new Marea(Marea.Tipo.PLEAMAR, new Date(Date.UTC(2015, 11, 31, 5, 59, 0)), new Coeficiente(53, 49)));
     mareas.push(new Marea(Marea.Tipo.BAJAMAR, new Date(Date.UTC(2015, 11, 31, 12, 3, 0)), new Coeficiente(53, 49)));
     mareas.push(new Marea(Marea.Tipo.PLEAMAR, new Date(Date.UTC(2015, 11, 31, 18, 25, 0)), new Coeficiente(53, 49)));
-
 
     global.tablaMareas = tablaMareas;
 })(window);
